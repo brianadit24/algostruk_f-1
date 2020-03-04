@@ -12,8 +12,8 @@ a.katakanPy() #Berasal dari class MhsTIF
 a.keadaan #Berasal dari class Manusia
 a.kota #Berasal dari class Mahasiswa
 a.listKuliah #Berasal dari class Mahasiswa
-a.makan #Berasal dari class Manusia
-a.mengalikanDenganDua #Berasal dari class Manusia
+a.makan() #Berasal dari class Manusia
+a.mengalikanDenganDua() #Berasal dari class Manusia
 a.nama #Berasal dari class Mahasiswa
 a.NIM #Berasal dari class Mahasiswa
 a.olahraga('Push Up') #Berasal dari class Manusia
