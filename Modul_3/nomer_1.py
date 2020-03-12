@@ -13,7 +13,7 @@ def cekMatrix(matrix):
         cek = all(isinstance(x, int) for x in matrix[i])
         if cek == True:
             hitung += 1
-    if hitung == 3:
+    if hitung == len(matrix):
         print('Matriks bujur sangkar dan memiliki tipe yang konsisten')
     else:
         print('Matriks memiliki tipe yang tidak konsisten')
