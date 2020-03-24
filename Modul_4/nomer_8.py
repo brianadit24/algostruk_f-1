@@ -10,7 +10,7 @@ def quiz(angka):
     maks = log2n(angka)
 
     print('Saya menyimpan angka bulat antara 1 sampai {}. anda punya {}x kesempatan. coba tebak'.format(angka, maks))
-    while jawab != quiz and count < maks:
+    while jawab != quiz and count <= maks:
         jawab = int(input('Masukkan tebakan ke-{}:>'.format(count)))
         if jawab == quiz:
             print('Ya. Anda benar')
@@ -20,7 +20,7 @@ def quiz(angka):
             print('Itu terlalu besar. Coba lagi')
         count += 1
 
-quiz(100)
+quiz(10000)
 
 # Karena menggunakan konsep Big-O. Dimana yang dipakai
 # adalah rumus O(log n) dengan rincian 1 = 1, 2 = 2, 4 = 3, 10 = 4, 100 = 7, 1000=10.
