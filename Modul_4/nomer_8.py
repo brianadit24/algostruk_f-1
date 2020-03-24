@@ -1,19 +1,26 @@
 from random import randint
 
-quiz = randint(1, 100)
-jawab = 0
-count = 1
+def log2n(n):
+    return 1 + log2n(n/2) if (n > 1) else 0
 
-print('Saya menyimpan angka bulat antara 1 sampai 100. anda punya 7x kesempatan. coba tebak')
-while jawab != quiz and count < 8:
-    jawab = int(input('Masukkan tebakan ke-{}:>'.format(count)))
-    if jawab == quiz:
-        print('Ya. Anda benar')
-    elif jawab < quiz:
-        print('Itu terlalu kecil. Coba lagi')
-    else:
-        print('Itu terlalu besar. Coba lagi')
-    count += 1
+def quiz(angka):
+    quiz = randint(1, angka)
+    jawab = 0
+    count = 1
+    maks = log2n(angka)
+
+    print('Saya menyimpan angka bulat antara 1 sampai 100. anda punya {}x kesempatan. coba tebak'.format(maks))
+    while jawab != quiz and count < maks:
+        jawab = int(input('Masukkan tebakan ke-{}:>'.format(count)))
+        if jawab == quiz:
+            print('Ya. Anda benar')
+        elif jawab < quiz:
+            print('Itu terlalu kecil. Coba lagi')
+        else:
+            print('Itu terlalu besar. Coba lagi')
+        count += 1
+
+quiz(100)
 
 # Karena menggunakan konsep Big-O. Dimana yang dipakai
 # adalah rumus O(log n) dengan rincian 1 = 1, 2 = 2, 4 = 3, 10 = 4, 100 = 7, 1000=10.
