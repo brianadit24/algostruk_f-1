@@ -9,7 +9,7 @@ def quiz(angka):
     count = 1
     maks = log2n(angka)
 
-    print('Saya menyimpan angka bulat antara 1 sampai 100. anda punya {}x kesempatan. coba tebak'.format(maks))
+    print('Saya menyimpan angka bulat antara 1 sampai {}. anda punya {}x kesempatan. coba tebak'.format(angka, maks))
     while jawab != quiz and count < maks:
         jawab = int(input('Masukkan tebakan ke-{}:>'.format(count)))
         if jawab == quiz:
