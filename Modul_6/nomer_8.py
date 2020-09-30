@@ -71,9 +71,9 @@ class LinkedList:
 
         
 ll = LinkedList()
-ll.tambahkan(77)
-ll.tambahkan(69)
-ll.tambahkan(18)
+ll.tambahkan(34)
+ll.tambahkan(23)
+ll.tambahkan(12)
 ll.tambahkan(1)
 ll.tambahkan(86)
 
